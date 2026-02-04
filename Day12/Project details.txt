@@ -1,0 +1,8 @@
+Project Details :
+
+1. VAK - Mini Project
+2. Portfolio - end to end
+3. ONE WITH BACKEND - end to end
+4. Notes App :  HTML CSS JAVASCRIPT
+5. Small HTML CSS PROJECT - Quiz Portal
+6. Next JS, Tailwind CSS

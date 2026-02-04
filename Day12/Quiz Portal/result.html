@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Result</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <h1>Python Quiz</h1>
+    </header>
+
+    <main class="container">
+
+        <div class="result-card">
+            <div class="submit-icon">✅</div>
+            <h1 style="color: var(--correct-color); margin-bottom: 2rem;">Submitted</h1>
+
+            <div class="score-display">
+                Your Final Score: <span id="score">0</span> / <span id="total">30</span>
+            </div>
+
+            <a href="index.html" class="btn" style="margin-top: 2rem;">Back to Home Page</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Quiz Portal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple logic to parse score from URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const score = urlParams.get('score') || 0;
+        const total = urlParams.get('total') || 30;
+
+        document.getElementById('score').textContent = score;
+        document.getElementById('total').textContent = total;
+    </script>
+
+</body>
+
+</html>

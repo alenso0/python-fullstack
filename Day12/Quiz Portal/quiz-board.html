@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Board</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="main-header"
+        style="padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center;">
+        <h2 id="quiz-header-title">Python Quiz</h2>
+        <button id="end-test-btn" class="btn" style="background-color: #dc3545;">End Test</button>
+    </header>
+
+    <main class="container" style="max-width: 1400px;">
+        <div class="quiz-container">
+
+            <!-- Question Area -->
+            <section class="question-section">
+                <div class="question-header">
+                    <span id="question-number">Question 1</span>
+                    <!-- Could add dynamic topic name here too -->
+                </div>
+
+                <div class="question-text" id="question-text">
+                    Loading question...
+                </div>
+
+                <div class="options-list" id="options-container">
+                    <!-- Options injected via JS -->
+                </div>
+
+                <div class="controls">
+                    <button id="prev-btn" class="btn btn-outline">Previous question</button>
+                    <button id="mark-btn" class="btn btn-outline" style="border-color: #ffc107; color: #ffca2c;">Mark as
+                        review</button>
+                    <button id="next-btn" class="btn">Next question</button>
+                </div>
+            </section>
+
+            <!-- Sidebar -->
+            <aside class="sidebar-section">
+
+                <!-- Timer -->
+                <div class="timer-box">
+                    <span id="timer">00 : 30 : 00</span>
+                </div>
+
+                <!-- Palette -->
+                <div class="question-palette">
+                    <h4>Question Palette</h4>
+                    <div class="palette-grid" id="palette-grid">
+                        <!-- Palette items injected via JS -->
+                    </div>
+                </div>
+
+            </aside>
+
+        </div>
+    </main>
+
+    <!-- Data and Logic -->
+    <script src="js/data.js"></script>
+    <script src="js/script.js"></script>
+
+</body>
+
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Click Counter</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+        }
+        
+        .container {
+            text-align: center;
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 {
+            color: #333;
+        }
+        
+        #clickDisplay {
+            font-size: 48px;
+            color: #007bff;
+            margin: 20px 0;
+            font-weight: bold;
+        }
+        
+        #clickButton {
+            padding: 15px 30px;
+            font-size: 18px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        #clickButton:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Click Counter</h1>
+        <div id="clickDisplay">0</div>
+        <button id="clickButton">Click Me</button>
+    </div>
+    <div>
+        <h2 id ="hover" onmouseover="this.style.color='red'" onmouseout="this.style.color='black'"> Hover</h2>
+    </div>
+    
+    <script src="4thFeb.js"></script>
+</body>
+</html>

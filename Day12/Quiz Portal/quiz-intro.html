@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz Intro</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using a simple SVG placeholder approach for icons if actual images aren't available, or text -->
+</head>
+
+<body>
+
+    <header class="main-header">
+        <h1>Python Quiz</h1>
+    </header>
+
+    <main class="container">
+
+        <div class="intro-card">
+            <h1 id="quiz-title">Python for beginners Quiz</h1>
+
+            <div class="intro-icons">
+                <div class="icon-box">
+                    <h3>⏱️</h3>
+                    <p>Total time to complete the test</p>
+                    <strong>30 minutes</strong>
+                </div>
+                <div class="icon-box">
+                    <h3>📝</h3>
+                    <p>Total Questions</p>
+                    <strong>30 Questions</strong>
+                </div>
+                <div class="icon-box">
+                    <h3>❓</h3>
+                    <p>Question Type</p>
+                    <strong>Multiple Choice</strong>
+                </div>
+            </div>
+
+            <button id="start-btn" class="btn">Start Test</button>
+            <br><br>
+            <a href="index.html" style="text-decoration: underline;">Back to Home page</a>
+        </div>
+
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Quiz Portal. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Simple logic to set title based on URL param
+        const urlParams = new URLSearchParams(window.location.search);
+        const topic = urlParams.get('topic');
+        const titleElement = document.getElementById('quiz-title');
+
+        let quizName = "Python Quiz";
+        if (topic === 'basic') quizName = "Basic Python Quiz For Beginners";
+        else if (topic === 'variables') quizName = "Python Variables and Data Types Quiz";
+        else if (topic === 'operators') quizName = "Python Operators and Expressions Quiz";
+        else if (topic === 'functions') quizName = "Python Functions Quiz";
+        else if (topic === 'io') quizName = "Python Input and Output Quiz";
+        else if (topic === 'loops') quizName = "Python If Else and Loops Quiz";
+
+        titleElement.textContent = quizName;
+
+        document.getElementById('start-btn').addEventListener('click', () => {
+            window.location.href = `quiz-board.html?topic=${topic || 'basic'}`;
+        });
+    </script>
+
+</body>
+
+</html>
