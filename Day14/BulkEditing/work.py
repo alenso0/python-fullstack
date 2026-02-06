@@ -6,7 +6,7 @@ import cv2
 ip="images"
 op="bw_images"
 os.makedirs(op,exist_ok=True)
-
+#os.mkdir(op) #will throw error if folder already exists
 
 for i in os.listdir(ip):
     img=cv2.imread(os.path.join(ip,i))
