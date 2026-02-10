@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALEN ALEX - Business Card</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: -apple-system, BlinkMacSystemFont, 'SF Pro', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+        }
+        
+        body {
+            background-color: #F5F5F7;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            display: flex;
+            flex-direction: column;
+            gap: 40px;
+            max-width: 1000px;
+        }
+        
+        h1 {
+            color: #1D1D1F;
+            font-weight: 500;
+            font-size: 24px;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        .cards-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 40px;
+            justify-content: center;
+        }
+        
+        /* Business card styles */
+        .card {
+            width: 350px; /* 3.5 inches at 100px per inch */
+            height: 200px; /* 2 inches at 100px per inch */
+            background-color: #FFFFFF;
+            border-radius: 8px;
+            box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+        }
+        
+        /* Front of card */
+        .card-front {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100%;
+            position: relative;
+        }
+        
+        .card-front::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 100px;
+            height: 100px;
+            background-color: #F5F5F7;
+            border-radius: 0 0 0 100%;
+            z-index: 0;
+        }
+        
+        .name {
+            font-size: 24px;
+            font-weight: 600;
+            color: #1D1D1F;
+            margin-bottom: 8px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .title {
+            font-size: 16px;
+            font-weight: 400;
+            color: #1D1D1F;
+            margin-bottom: 4px;
+            position: relative;
+            z-index: 1;
+        }
+        
+        .company {
+            font-size: 14px;
+            font-weight: 400;
+            color: #86868B;
+            position: relative;
+            z-index: 1;
+        }
+        
+        /* Back of card */
+        .card-back {
+            padding: 30px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            height: 100%;
+            position: relative;
+        }
+        
+        .card-back::after {
+            content: '';
+            position: absolute;
+            bottom: 40px;
+            left: 30px;
+            width: 40px;
+            height: 2px;
+            background: linear-gradient(90deg, #A1A1A6, #F5F5F7);
+        }
+        
+        .contact-info {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        
+        .contact-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #1D1D1F;
+            font-weight: 300;
+        }
+        
+        .contact-item i {
+            color: #86868B;
+            font-size: 16px;
+            width: 16px;
+            text-align: center;
+        }
+        
+        /* Print styles */
+        @media print {
+            body {
+                background-color: white;
+                padding: 0;
+            }
+            
+            .container {
+                gap: 0;
+            }
+            
+            h1 {
+                display: none;
+            }
+            
+            .cards-container {
+                gap: 0;
+            }
+            
+            .card {
+                box-shadow: none;
+                page-break-inside: avoid;
+                margin: 0;
+                border: 1px solid #E5E5E5;
+            }
+            
+            .card:hover {
+                transform: none;
+                box-shadow: none;
+            }
+        }
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Apple-Inspired Business Card</h1>
+        
+        <div class="cards-container">
+            <!-- Front of Card -->
+            <div class="card">
+                <div class="card-front">
+                    <div class="name">alenso</div>
+                    <div class="title">CEO</div>
+                    <div class="company">ALENSO Group</div>
+                </div>
+            </div>
+            
+            <!-- Back of Card -->
+            <div class="card">
+                <div class="card-back">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="far fa-envelope"></i>
+                            <span>sgarcia@yahoo.com</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-phone-alt"></i>
+                            <span>+65 6659 8805</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Boston, MA, USA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
