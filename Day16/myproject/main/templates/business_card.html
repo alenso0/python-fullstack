@@ -29,6 +29,11 @@
             gap: 40px;
             max-width: 1000px;
         }
+
+        .cust {
+            display: grid;
+            align-self: center;
+        }
         
         h1 {
             color: #1D1D1F;
@@ -190,7 +195,9 @@
 <body>
     <div class="container">
         <h1>Experience of {{age}} years</h1>
-        
+        <div class="cust">
+        <h2> {% if age > 18 %} Adult Engineer{% else %} Minor Engineer{% endif %}</h2>
+        </div>  <!-- Closing div for .cust -->
         <div class="cards-container">
             <!-- Front of Card -->
             <div class="card">
