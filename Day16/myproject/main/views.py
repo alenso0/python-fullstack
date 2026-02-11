@@ -4,7 +4,8 @@ from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
-    return render(request, "business_card.html", {"message": "Hello, World!"})
+    d={"name": "Alen Alex", "age": 20, "occupation": "Software Engineer", "username": "theceo", "phone": "+1234567890"}
+    return render(request, "business_card.html", d)
 
 def second(request):
     return HttpResponse("<h1>This is the second page.</h1>")

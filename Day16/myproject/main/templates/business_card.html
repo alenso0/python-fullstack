@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ALEN ALEX - Business Card</title>
+    <title>{{ name }} - Business Card</title>
     <style>
         /* Reset and base styles */
         * {
@@ -189,15 +189,15 @@
 </head>
 <body>
     <div class="container">
-        <h1>Apple-Inspired Business Card</h1>
+        <h1>Experience of {{age}} years</h1>
         
         <div class="cards-container">
             <!-- Front of Card -->
             <div class="card">
                 <div class="card-front">
-                    <div class="name">alenso</div>
-                    <div class="title">CEO</div>
-                    <div class="company">ALENSO Group</div>
+                    <div class="name">{{name}}</div>
+                    <div class="title">{{occupation}}</div>
+                    <div class="company">SORGIN</div>
                 </div>
             </div>
             
@@ -207,15 +207,15 @@
                     <div class="contact-info">
                         <div class="contact-item">
                             <i class="far fa-envelope"></i>
-                            <span>sgarcia@yahoo.com</span>
+                            <span>  {{username}}@sorgin.in</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-phone-alt"></i>
-                            <span>+65 6659 8805</span>
+                            <span>{{phone}}</span>
                         </div>
                         <div class="contact-item">
                             <i class="fas fa-map-marker-alt"></i>
-                            <span>Boston, MA, USA</span>
+                            <span>TVM, Kerala, INDIA</span>
                         </div>
                     </div>
                 </div>
